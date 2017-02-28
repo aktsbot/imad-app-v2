@@ -1,6 +1,9 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
+var pg = require('pg');
+var Pool = require('pg').Pool;
+var bp = require('body-parser');
 
 var app = express();
 app.use(morgan('combined'));
