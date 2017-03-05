@@ -196,6 +196,8 @@ add_quote_btn.onclick = function() {
 
 	//console.log(post_string);
     add_quote_btn.disabled = true;
+    var loading_anim = document.getElementById("loading-anim");
+	loading_anim.style.display = "block";
 
 	var xhr = new XMLHttpRequest();
 	xhr.open('POST', "/quote2/add-quote-submit", true);
@@ -213,6 +215,7 @@ add_quote_btn.onclick = function() {
 	        	modalDisplay(1);
 	        }
 	        add_quote_btn.disabled = false;
+	        loading_anim.style.display = "none";
 	    }
 	}
 	// "quote=foo&quote_by=12&user=mokoogugksxtax&tag=2"
