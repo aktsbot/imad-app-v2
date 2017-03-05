@@ -214,8 +214,9 @@ add_quote_btn.onclick = function() {
 	        } else {
 	        	modalDisplay(1);
 	        }
-	        setTags();
-			setUsers();
+	        //setTags();
+			//setUsers();
+			// this for some unknown reason breaks JS
 	        add_quote_btn.disabled = false;
 	        loading_anim.style.display = "none";
 	    }
