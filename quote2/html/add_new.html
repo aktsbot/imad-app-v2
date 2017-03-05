@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add a quote | IMAD Exercise</title>
+	<link rel="stylesheet" type="text/css" href="/quote2/css/style2.css">
+	<link rel="shortcut icon" href="/quote2/images/favicon.png" />
+</head>
+<body>
+
+	<div id="main-container">
+		
+		<!-- The Modal -->
+		<div id="modal-msg-box" class="modal">
+
+		  <!-- Modal content -->
+		  <div class="modal-content">
+		    <span class="close">&times;</span> <!-- gives me an X -->
+		    <p id="modal-text"></p>
+		  </div>
+
+		</div>
+		<!-- end of modal -->
+
+
+		<div id="main-header">
+			<h1>Add a quote</h1>
+		</div>
+
+		<div id="add-quote-content">
+			<textarea id="add-quote-content-text" rows="5" cols="50" placeholder="Tough times never last, but tough people do"></textarea> <br>
+			<input type="text" id="q_by" placeholder="Robert H Schuller" class="q_by"></input>
+			<br>
+			<input type="text" id="q_user" placeholder="Contributed by (optional)"></input>
+			<select id="soflow-user-select">
+			</select>
+			<br>
+			<input type="text" id="q_tag" placeholder="Tagged as (optional)"></input> 
+			<select id="soflow-tag-select">
+			</select>
+			<br>
+			<button id='add_quote_btn_id'>Add Quote</button>
+		</div>
+
+		<div id="main-footer">
+		<ul>
+			<li><a href="/quote2">quotes</a></li>
+			<li><a href="https://github.com/aktsbot/imad-app-v2">source</a></li>
+			<li><a href="http://www.vim.org/">vim</a></li>
+			<li><a href="http://www.imad.tech/">imad</a></li>
+			<li><a href="http://tango.freedesktop.org/Tango_Icon_Theme_Guidelines">tango</a></li>
+		</ul>
+	</div>
+
+	</div>
+	
+	<script src="/quote2/js/script2.js"></script>
+
+</body>
+</html>
