@@ -17,7 +17,7 @@ var config = {
   user: 'aktsbot', //env var: PGUSER
   database: 'aktsbot', //env var: PGDATABASE
   password: process.env.DB_PASSWORD, //env var: PGPASSWORD
-  host: 'localhost', // Server hosting the postgres database
+  host: 'db.imad.hasura-app.io', // Server hosting the postgres database
   port: 5432 //env var: PGPORT
 };
 // var config = {
