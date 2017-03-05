@@ -258,8 +258,8 @@ function insertQuote(quote, quote_by, user_id, tag_id) {
 
   pool.connect(function(err, client, done) {
     if(err) {
-      res.send('database_busy');
-      return;
+      //res.send('database_busy');
+      return 'database_busy';
     }
     
     client.query(query, function(err, result) {
@@ -267,8 +267,8 @@ function insertQuote(quote, quote_by, user_id, tag_id) {
       done(err);
 
       if(err) {
-        res.send('database_entry_failed');
-        return;
+        //res.send('database_entry_failed');
+        return 'database_entry_failed';
       }
     });
 
