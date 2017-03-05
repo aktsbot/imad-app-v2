@@ -13,20 +13,20 @@ app.use(bp.json()); // support json encoded bodies
 app.use(bp.urlencoded({ extended: true })); // support encoded bodies
 
 // database connectivity
-// var config = {
-//   user: 'aktsbot', //env var: PGUSER
-//   database: 'aktsbot', //env var: PGDATABASE
-//   password: process.env.DB_PASSWORD, //env var: PGPASSWORD
-//   host: 'localhost', // Server hosting the postgres database
-//   port: 5432 //env var: PGPORT
-// };
 var config = {
-  user: 'akts_db_user', //env var: PGUSER
-  database: 'akts_db', //env var: PGDATABASE
-  password: 'password', //env var: PGPASSWORD
+  user: 'aktsbot', //env var: PGUSER
+  database: 'aktsbot', //env var: PGDATABASE
+  password: process.env.DB_PASSWORD, //env var: PGPASSWORD
   host: 'localhost', // Server hosting the postgres database
   port: 5432 //env var: PGPORT
 };
+// var config = {
+//   user: 'akts_db_user', //env var: PGUSER
+//   database: 'akts_db', //env var: PGDATABASE
+//   password: 'password', //env var: PGPASSWORD
+//   host: 'localhost', // Server hosting the postgres database
+//   port: 5432 //env var: PGPORT
+// };
 
 var pool = new Pool(config);
 
