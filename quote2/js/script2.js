@@ -195,6 +195,7 @@ add_quote_btn.onclick = function() {
 	var post_string = "quote="+quote_textarea.value+"&quote_by="+quote_by_field.value+"&user="+user+"&tag_id="+tag_id+"&tag="+tag+"&user_id="+user_id;
 
 	//console.log(post_string);
+    add_quote_btn.disabled = true;
 
 	var xhr = new XMLHttpRequest();
 	xhr.open('POST', "/quote2/add-quote-submit", true);
@@ -211,6 +212,7 @@ add_quote_btn.onclick = function() {
 	        } else {
 	        	modalDisplay(1);
 	        }
+	        add_quote_btn.disabled = false;
 	    }
 	}
 	// "quote=foo&quote_by=12&user=mokoogugksxtax&tag=2"
