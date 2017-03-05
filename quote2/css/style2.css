@@ -208,6 +208,11 @@ border:1px solid #aaa !important;*/
     float: center;
 }
 
+
+button:disabled {
+    background-color: #dddddd;
+}
+
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
