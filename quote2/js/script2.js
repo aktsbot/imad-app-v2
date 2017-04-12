@@ -152,7 +152,7 @@ add_quote_btn.onclick = function() {
 	var user_id = document.getElementById("soflow-user-select").value;
 
     if(!isStringValid(user) || !isStringValid(tag)) {
-        modal_text.innerHTML = "Please use numbers and alphabets for user names and tags. <br /><b><i>Ahoy!! mia hacker man</i></b>";
+        modal_text.innerHTML = "Please use numbers and alphabets for user names and tags. <br /><b>Ahoy!!</b> hacker man, I'll eat your hamster soon.";
 
 		modal.style.display = "block";
 
