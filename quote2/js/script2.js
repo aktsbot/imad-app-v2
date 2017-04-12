@@ -98,6 +98,13 @@ function modalDisplay(db_add_status) {
 }
 // -----------------------
 
+// http://stackoverflow.com/questions/8253189/in-javascript-how-do-i-check-if-string-is-only-lettersnumbers-underscore-allo
+function isStringValid(str) { return /^\w+$/.test(str); }
+/*
+    thanks IMAD bros for pointing this out :)
+*/
+
+
 setTags();
 setUsers();
 
@@ -143,6 +150,26 @@ add_quote_btn.onclick = function() {
 	tag = document.getElementById("q_tag").value;
 	var tag_id = document.getElementById("soflow-tag-select").value;
 	var user_id = document.getElementById("soflow-user-select").value;
+
+    if(!isStringValid(user) || !isStringValid(tag)) {
+        modal_text.innerHTML = "Please use numbers and alphabets for user names and tags.";
+
+		modal.style.display = "block";
+
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function() {
+		    modal.style.display = "none";
+		}
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+		    if (event.target == modal) {
+		        modal.style.display = "none";
+		    }
+		}
+
+		return;
+    }
 
 	if(user != "" && user_id != "1") {
 		modal_text.innerHTML = "Yikes! I know this is a design error.<br>The value of <i><b>\"Contributed by\"</b></i> will only be taken, if user choice is <i><b>\"anon\"</b></i>.";
